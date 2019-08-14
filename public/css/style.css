@@ -1,0 +1,99 @@
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.viewport{
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.imagen-header{
+
+    background-image: url("https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.nav-gradient{
+    
+    background: #303030;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.7)), color-stop(100%, rgba(192, 192, 192, 0)));
+    background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.7) 0%, rgba(192, 192, 192, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(192, 192, 192, 0)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7) 0%, rgba(192, 192, 192, 0) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(192, 192, 192, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#c0c0c0', GradientType=0);
+
+}
+
+.navbar{
+    padding: 1.5rem 1rem;
+}
+
+.navbar-toggler {
+    font-size: 1.60rem;
+    line-height: 1;
+}
+
+.nav-item a{
+
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+
+}
+
