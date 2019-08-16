@@ -97,3 +97,92 @@ html, body {
 
 }
 
+.search{
+    height: 6.25rem;
+    background: #303030;
+    margin-top: -50px;
+}
+
+figure .icon-service{
+    font-size: 4rem;
+    align-items: center;
+}
+
+.services{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.card-services{
+    border: 0px;
+}
+
+.image1234 {
+    position:relative;
+    background: url("https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover cover;
+    min-height: 200px;
+    padding: 230px 0px 230px 0px;
+    
+     
+}
+
+.card-about{
+    border: 0px;
+}
+
+.for-sale{
+    background-color: #e5e5e549;
+}
+
+.for-sale h5{
+    padding-top: 2rem;
+}
+
+.image123456 {
+    position:relative;
+    background: url("https://images.pexels.com/photos/751268/pexels-photo-751268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover cover;
+    min-height: 200px;
+    padding: 230px 0px 230px 0px;
+    
+     
+}
+
+.for-rent{
+    background-color: #e5e5e549;
+}
+
+.for-rent h5{
+    padding-top: 2rem;
+}
+
+.image12345678 {
+    position:relative;
+    background: url("https://images.pexels.com/photos/2499790/pexels-photo-2499790.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover cover;
+    min-height: 100px;
+    padding: 200px 0px 200px 0px;
+    
+     
+}
+
+/* .partners{
+    width: 300px;
+    height: 300px;
+} */
+
+
+
