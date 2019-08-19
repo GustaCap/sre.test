@@ -61,7 +61,7 @@ html, body {
 
 .imagen-header{
 
-    background-image: url("https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-image: url("https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -99,8 +99,9 @@ html, body {
 
 .search{
     height: 6.25rem;
-    background: #303030;
+    background: #ffffff;
     margin-top: -50px;
+    border: 0.1rem solid rgba(0, 0, 0, 0.192);
 }
 
 figure .icon-service{
@@ -157,9 +158,9 @@ figure .icon-service{
      
 }
 
-.for-rent{
+/* .for-rent{
     background-color: #e5e5e549;
-}
+} */
 
 .for-rent h5{
     padding-top: 2rem;
@@ -184,5 +185,29 @@ figure .icon-service{
     height: 300px;
 } */
 
+/* .partners{
+    background-color: #e5e5e549;
+} */
+
+.bg-color-1{
+    height: 400px;
+    background: #000000;
+}
+.bg-color-2{
+    height: 400px;
+    background: #212121;
+}
+.bg-color-3{
+    height: 400px;
+    background: #303030;
+}
+.bg-color-4{
+    height: 400px;
+    background: #424242;
+}
+.bg-color-5{
+    height: 100px;
+    background: #000000;
+}
 
 
