@@ -37,16 +37,16 @@
                                     <ul class="navbar-nav ml-auto">
                                         <!-- Authentication Links -->
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('login') }}">Home</a>
+                                                <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-home"></i>  Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('login') }}">Services</a>
+                                            <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-concierge-bell"></i>   Services</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#about-us">About Us</a>
+                                            <a class="nav-link" href="#about-us"><i class="fas fa-users"></i>   About Us</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('login') }}">Contact</a>
+                                            <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-comments"></i>   Contact</a>
                                         </li>
                                         {{-- <li class="nav-item">
                                             <a class="nav-link" href="{{ route('login') }}">{{ __('Contact') }}</a>
@@ -54,11 +54,11 @@
                                         
                                         @guest
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                                <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-user-circle"></i>   {{ __('Login') }}</a>
                                             </li>
                                             @if (Route::has('register'))
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                                    <a class="nav-link" href="{{ route('register') }}"><i class="fas fa-registered"></i>   {{ __('Register') }}</a>
                                                 </li>
                                             @endif
                                         @else
@@ -84,33 +84,49 @@
                                 </div>
                             </div>
                         </nav>
+                        {{-- Section search --}}
+                        <section class="searchs" id="searchs">
+                            <div class="container search c2">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-3 col-sm-3">
+                                                    {{-- <label class="item-search" for="main-location">Location</label> --}}
+                                                        <select id="my-select" class="form-control select-search" name="">
+                                                            <option>Location 1</option>
+                                                            <option>Location 2</option>
+                                                            </select>
+                                                    
+                                                    </div>
+                                                <div class="col-md-3 col-sm-3">
+                                                        {{-- <label class="item-search" for="property-status">Property Status</label> --}}
+                                                        <select id="my-select" class="form-control select-search" name="">
+                                                            <option>Type 1</option>
+                                                            <option>Type 2</option>
+                                                            </select>
+                                                    
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-3">
+                                                            {{-- <label class="item-search" for="main-location">Property Type</label> --}}
+                                                            <select id="my-select" class="form-control select-search" name="">
+                                                                <option>Category 1</option>
+                                                                <option>Category 2</option>
+                                                                </select>
+                                                        
+                                                        </div>
+                                                        <div class="col-md-3 col-sm-3">
+                                                            
+                                                                {{-- <label class="item-search" for="main-location">Search</label> --}}
+                                                                <a href="#" class="form-control btn btn-primary"><i class="fas fa-search"></i> Search</a> 
+                                                            
+                                                            </div>
+                                            </div>
+                                    </div>
+                        </section>
             </div>
+            
 
         </header>
 
-        {{-- Section search --}}
-        <section class="searchs" id="searchs">
-            <div class="searchs1">
-                    <div class="container search">
-                            <div class="row justify-content-center">
-                                <div class="col-md-3 col-sm-3">
-                                    Main Location
-                                    </div>
-                                <div class="col-md-3 col-sm-3">
-                                    Property Status
-                                    </div>
-                                    <div class="col-md-3 col-sm-3">
-                                        Property Type
-                                        </div>
-                                        <div class="col-md-3 col-sm-3">
-                                                <i class="fas fa-search">   Search</i>
-                                            </div>
-                            </div>
-                    </div>
-            </div>
-        </section>
-
-
+        
         {{-- Section services --}}
         <section class="services" id="services">
             <div class="container">
@@ -188,7 +204,7 @@
 
         {{-- Section For sale --}}
         <section class="for-sale" id="for-sale">
-                <div class="container pb-5">
+                <div class="container mb-5 pb-5">
                         <div class="card-title text-center card-forsale mb-5">
                             <h5>Properties</h5>
                             <h1>For Sale</h1>
@@ -202,7 +218,21 @@
                                         <div class="card-body">
                                           <h5 class="card-title">Card title</h5>
                                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                                          <div class="row">
+                                              <div class="col-md-4">
+                                                  <span>Bedrooms</span>
+                                                    <i class="fas fa-bed"> 4</i>
+                                              </div>
+                                              <div class="col-md-4">
+                                                  <span>Bathroom</span>
+                                                    <i class="fas fa-shower"> 2</i>
+                                              </div>
+                                              <div class="col-md-4">
+                                                  <span>Size Area</span>
+                                                    <i class="fas fa-vector-square"> 150</i>
+                                              </div>
+                                          </div>
+                                          <a href="#" class="btn btn-primary">More...</a>                               
                                         </div>
                                       </div>
 
@@ -214,6 +244,9 @@
                                             <div class="card-body">
                                               <h5 class="card-title">Card title</h5>
                                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                              <i class="fas fa-bed"></i>
+                                          <i class="fas fa-shower"></i>
+                                          <i class="fas fa-vector-square"></i>
                                               <a href="#" class="btn btn-primary">Go somewhere</a>
                                             </div>
                                           </div>
@@ -225,6 +258,9 @@
                                                 <div class="card-body">
                                                   <h5 class="card-title">Card title</h5>
                                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                  <i class="fas fa-bed"></i>
+                                          <i class="fas fa-shower"></i>
+                                          <i class="fas fa-vector-square"></i>
                                                   <a href="#" class="btn btn-primary">Go somewhere</a>
                                                 </div>
                                               </div>
@@ -249,7 +285,7 @@
 
 
         {{-- Section For rent --}}
-        <section class="for-rent mb-5" id="for-sale">
+        <section class="for-rent mb-5" id="for-rent">
                 <div class="container mb-5 pb-5">
                         <div class="card-title text-center card-forrent mb-5">
                             <h5>Properties</h5>
@@ -298,16 +334,16 @@
 
 
         {{-- Section publish your property --}}
-        <section class="about-us" id="about-us">
-                <div class="container">
-                    <div class="card card-about mb-5">
+        <section class="publish" id="publish">
+                <div class="container ">
+                    <div class="card card-publish">
                         <div class="card-title text-center mt-5">
                             <h1>Publish your property</h1>
                             </div>
                                 <div class="card-body p-5 text-center">
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio labore mollitia delectus veniam laboriosam eos consequuntur nostrum earum. Quae eius quaerat optio porro eaque iste voluptatem tenetur asperiores sit nesciunt.</p>
                                     </div>
-                                    <div class="botton1 text-center">
+                                    <div class="botton1 text-center mb-5">
                                         <a href="#" class="btn btn-primary">Publich Here!</a>
                                         </div>
                         </div>
@@ -378,7 +414,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-md-12 col-sm-12 text-white text-center bg-color-5">
                                     
-                                    <p class="mt-5">Copyright ©2019 All rights reserved | This template is made with by Colorlib</p>
+                                    <p class="mt-5">Copyright ©2019 All rights reserved | This template is made with by SAGA REAL ESTATE</p>
                                 
                                 </div>
 
