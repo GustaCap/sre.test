@@ -128,7 +128,7 @@
 
         
         {{-- Section services --}}
-        <section class="services" id="services">
+        <section class="services p-5" id="services">
             <div class="container">
                 <div class="card-title text-center mb-5">
                     <h1>Services</h1>
@@ -203,7 +203,7 @@
 
 
         {{-- Section For sale --}}
-        <section class="for-sale" id="for-sale">
+        <section class="for-sale pb-5" id="for-sale">
                 <div class="container mb-5 pb-5">
                         <div class="card-title text-center card-forsale mb-5">
                             <h5>Properties</h5>
@@ -244,10 +244,21 @@
                                             <div class="card-body">
                                               <h5 class="card-title">Card title</h5>
                                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <i class="fas fa-bed"></i>
-                                          <i class="fas fa-shower"></i>
-                                          <i class="fas fa-vector-square"></i>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                                              <div class="row">
+                                                <div class="col-md-4">
+                                                    <span>Bedrooms</span>
+                                                      <i class="fas fa-bed"> 4</i>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <span>Bathroom</span>
+                                                      <i class="fas fa-shower"> 2</i>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <span>Size Area</span>
+                                                      <i class="fas fa-vector-square"> 150</i>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="btn btn-primary">More...</a> 
                                             </div>
                                           </div>
                             
@@ -258,10 +269,21 @@
                                                 <div class="card-body">
                                                   <h5 class="card-title">Card title</h5>
                                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                  <i class="fas fa-bed"></i>
-                                          <i class="fas fa-shower"></i>
-                                          <i class="fas fa-vector-square"></i>
-                                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                                  <div class="row">
+                                                    <div class="col-md-4">
+                                                        <span>Bedrooms</span>
+                                                          <i class="fas fa-bed"> 4</i>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <span>Bathroom</span>
+                                                          <i class="fas fa-shower"> 2</i>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <span>Size Area</span>
+                                                          <i class="fas fa-vector-square"> 150</i>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-primary">More...</a> 
                                                 </div>
                                               </div>
                             

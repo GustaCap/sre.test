@@ -1,0 +1,58 @@
+.login-img{
+
+    position:relative;
+    background: url("https://images.pexels.com/photos/2040626/pexels-photo-2040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover cover;
+    
+}
+
+.login-style{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.card-style{
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 31px 31px 31px 31px;
+    -moz-border-radius: 31px 31px 31px 31px;
+    -webkit-border-radius: 31px 31px 31px 31px;
+    border: 0px solid #000000;
+    /* sombra */
+    -webkit-box-shadow: 10px 11px 21px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 11px 21px -6px rgba(0,0,0,0.75);
+    box-shadow: 10px 11px 21px -6px rgba(0,0,0,0.75);
+}
+
+.input-login-style{
+
+    border-radius: 31px 31px 31px 31px;
+    -moz-border-radius: 31px 31px 31px 31px;
+    -webkit-border-radius: 31px 31px 31px 31px;
+    border: 1px solid #0000002c;
+
+}
+
+/* .nav-link .text-item{
+
+    color: rgb(0, 0, 0);
+} */
+
+.navbar-light .navbar-nav .nav-link{
+
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+
+}
+
