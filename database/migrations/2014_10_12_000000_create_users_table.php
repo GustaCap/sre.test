@@ -14,28 +14,14 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('firstName');
             $table->string('lastName');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            /*
-
-                Informacion adicional del Usuario
-                Additional User Information
-
-            */
-            $table->string('mobileNumber');
-            $table->string('officeNumber');
-            $table->string('faxNumber');
-            $table->string('facebookURL');
-            $table->string('twitterURL');
-            $table->string('instagramURL');
-            
-
-            
-
+            $table->string('password_r'); /* clave repetida */
+            $table->string('codido_seguridad'); /* Srea usado para recuperar la contraseña, este sera generado por una funcion (codigo de 8 digitos) */
+            $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -15,6 +15,9 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    protected $table = 'users'; /* agregada 02/01/2020 */
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -36,4 +39,28 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**Relacion: un usuario tiene un rol */
+    public function rol()
+    {
+        return $this->belongsTo('App\RolSre');
+    }
+
+    /**Relacion: un usuarios tiene muchas reservaciones */
+    public function reservaciones()
+    {
+        return $this->hasMany('App\Reservacion');
+    }
+
+    /**Relacion: un usuario puede publicar muchas propiedades */
+    public function forrents()
+    {
+        return $this->hasMany('App\Forrent');
+    }
+
+    /**Relacion: un usuario puede publicar muchas propiedades */
+    public function forsales()
+    {
+        return $this->hasMany('App\Forsale');
+    }
 }
