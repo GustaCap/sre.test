@@ -15,4 +15,9 @@ class Forrent extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function plan_servicio()
+    {
+        return $this->belongsTo('App\PlanServicio');
+    }
 }
