@@ -16,7 +16,10 @@ class CreateReservacionsTable extends Migration
         Schema::create('reservacions', function (Blueprint $table) {
             $table->increments('id');
             /**Datos de la reservacion + usuario que hace la reservacion */
-            $table->string('codigo_reserva');
+            /**
+             * Codigo generado por funcion. 6 caracacteres
+             */
+            $table->string('codigo_reservacions');
             $table->string('user_reserva');
             $table->string('codigo_user');
             $table->string('cantidad_personas');
@@ -26,6 +29,12 @@ class CreateReservacionsTable extends Migration
             $table->string('codigo_publicacion');
             $table->string('owner_user');
             $table->string('codigo_user');
+
+            /**
+             * Relaciones
+             */
+            $table->integer('id_users')->unsigned();
+            $table->foreign('id_users')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
 
             $table->timestamps();
         });

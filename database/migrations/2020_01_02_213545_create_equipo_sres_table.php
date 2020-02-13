@@ -15,6 +15,21 @@ class CreateEquipoSresTable extends Migration
     {
         Schema::create('equipo_sres', function (Blueprint $table) {
             $table->increments('id');
+            /**
+             * Tipos: proveedor, beneficiario
+             */
+            $table->string('tipo');
+            $table->string('name_empresa');
+            $table->string('rif_dni');
+            /**
+             * Razon social: ingeniero, electricista, o si es una empresa seria limpiesa, reparacion etc.
+             */
+            $table->string('razon_social');
+            /**
+             * Codigo generado por una funcion... 6caracteres
+             */
+            $table->string('codigo_equipo_sres')->unique();
+
             $table->timestamps();
         });
     }

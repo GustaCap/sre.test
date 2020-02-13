@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateForrentsTable extends Migration
+class CreateForsalesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateForrentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('forrents', function (Blueprint $table) {
+        Schema::create('forsales', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('codigo');
+            /**
+             * Codigo generado por una funcion. 6 caracteres
+             */
+            $table->string('codigo_forsales')->unique();
             $table->string('Dirección');
             $table->string('tipo_propiedad');
             /**Tipo de propiedad
@@ -27,7 +30,6 @@ class CreateForrentsTable extends Migration
              * -apartment building
              * -condominium
              * -single family
-             *
             */
             $table->integer('mts_cuadrados');
             $table->string('nrohabitaciones');
@@ -59,6 +61,12 @@ class CreateForrentsTable extends Migration
              * telefono fijo
              */
 
+            $table->integer('id_users')->unsigned();
+            $table->foreign('id_users')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+
+            $table->integer('id_plan_servicios')->unsigned();
+            $table->foreign('id_plan_servicios')->references('id')->on('plan_servicios')->onUpdate('cascade')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
@@ -70,6 +78,6 @@ class CreateForrentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('forrents');
+        Schema::dropIfExists('forsales');
     }
 }

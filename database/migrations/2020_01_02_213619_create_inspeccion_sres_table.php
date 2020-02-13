@@ -17,6 +17,14 @@ class CreateInspeccionSresTable extends Migration
             $table->increments('id');
             $table->string('codigo');
             $table->string('responsable');
+
+            /**
+             * Relaciones
+             */
+            $table->integer('id_equipo_sres')->unsigned();
+            $table->foreign('id_equipo_sres')->references('id')->on('equipo_sres')->onUpdate('cascade')->onDelete('cascade');
+
+
             $table->timestamps();
         });
     }
