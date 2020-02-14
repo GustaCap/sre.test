@@ -19,7 +19,7 @@ class User extends Authenticatable
     protected $table = 'users'; /* agregada 02/01/2020 */
 
     protected $fillable = [
-        'name', 'email', 'password',
+        'codigoUser','firstName','lastName','email', 'password','id_rol'
     ];
 
     /**
@@ -43,7 +43,7 @@ class User extends Authenticatable
     /**Relacion: un usuario tiene un rol */
     public function rol()
     {
-        return $this->belongsTo('App\RolSre');
+        return $this->belongsTo('App\Rol');
     }
 
     /**Relacion: un usuarios tiene muchas reservaciones */
@@ -53,14 +53,9 @@ class User extends Authenticatable
     }
 
     /**Relacion: un usuario puede publicar muchas propiedades */
-    public function forrents()
+    public function publicaciones()
     {
-        return $this->hasMany('App\Forrent');
+        return $this->hasMany('App\Publicacion');
     }
 
-    /**Relacion: un usuario puede publicar muchas propiedades */
-    public function forsales()
-    {
-        return $this->hasMany('App\Forsale');
-    }
 }

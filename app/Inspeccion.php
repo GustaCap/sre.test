@@ -4,10 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class InspeccionSre extends Model
+class Inspeccion extends Model
 {
     //
-    protected $table = 'inspeccion_sres';
+    protected $table = 'inspecciones';
+
+    protected $fillable = [
+        'observaciones',
+    ];
+
 
     /**
      * Relacion: Una inspeccion la realiza un personal de Sre

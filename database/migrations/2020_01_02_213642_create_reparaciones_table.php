@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLimpiezaSresTable extends Migration
+class CreateReparacionesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,16 @@ class CreateLimpiezaSresTable extends Migration
      */
     public function up()
     {
-        Schema::create('limpieza_sres', function (Blueprint $table) {
+        Schema::create('reparaciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('codigo');
-            $table->string('responsable');
+            $table->string('codigoReparaciones')->unique();
 
             /**
              * Relaciones
              */
-            $table->integer('id_equipo_sres')->unsigned();
-            $table->foreign('id_equipo_sres')->references('id')->on('equipo_sres')->onUpdate('cascade')->onDelete('cascade');
-
+            $table->integer('id_equipoSre')->unsigned();
+            $table->foreign('id_equipoSre')->references('id')->on('equipoSre')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('observaciones');
             $table->timestamps();
         });
     }
@@ -35,6 +34,6 @@ class CreateLimpiezaSresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('limpieza_sres');
+        Schema::dropIfExists('reparaciones');
     }
 }

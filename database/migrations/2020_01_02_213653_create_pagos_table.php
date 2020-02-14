@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInspeccionSresTable extends Migration
+class CreatePagosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,16 @@ class CreateInspeccionSresTable extends Migration
      */
     public function up()
     {
-        Schema::create('inspeccion_sres', function (Blueprint $table) {
+        Schema::create('pagos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('codigo');
-            $table->string('responsable');
-
+            $table->string('codigoPago')->unique();
+            $table->string('nroFactura');
             /**
              * Relaciones
              */
-            $table->integer('id_equipo_sres')->unsigned();
-            $table->foreign('id_equipo_sres')->references('id')->on('equipo_sres')->onUpdate('cascade')->onDelete('cascade');
-
-
+            $table->integer('id_equipoSre')->unsigned();
+            $table->foreign('id_equipoSre')->references('id')->on('equipoSre')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('observaciones');
             $table->timestamps();
         });
     }
@@ -36,6 +34,6 @@ class CreateInspeccionSresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inspeccion_sres');
+        Schema::dropIfExists('pagos');
     }
 }

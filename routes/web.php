@@ -18,3 +18,24 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register')->name('register.create');
+
+
+
+
+
+Route::get('planes', 'PlanServicioController@index')->name('show.planes');
+Route::post('planes', 'PlanServicioController@store')->name('store.planes');
+
+Route::get('publicaciones', 'PublicacionController@index')->name('show.publicaciones');
+Route::post('publicaciones', 'PublicacionController@store')->name('store.publicaciones');
+
+Route::get('reservaciones', 'ReservacionController@index')->name('show.reservaciones');
+
+

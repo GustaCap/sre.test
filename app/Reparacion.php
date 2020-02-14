@@ -4,10 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ReparacionSre extends Model
+class Reparacion extends Model
 {
     //
-    protected $table = 'reparacion_sres';
+    protected $table = 'reparaciones';
+
+    protected $fillable = [
+        'observaciones',
+    ];
 
     public function equiposre()
     {

@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RolSre extends Model
+class Rol extends Model
 {
     //
-    protected $table = 'rol_sres';
+    protected $table = 'roles';
 
 
     /**Relacion: un rol lo tienen muchos usuarios */

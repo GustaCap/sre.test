@@ -13,6 +13,7 @@
                         </div>
                     @endif
                     You are logged in!
+                    {{ Auth::user()->firstName }}, {{ Auth::user()->lastName }}
                 </div>
             </div>
         </div>

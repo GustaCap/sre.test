@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\PlanServicio;
+use App\Plan;
 use Illuminate\Http\Request;
 
 class PlanServicioController extends Controller
@@ -15,6 +15,8 @@ class PlanServicioController extends Controller
     public function index()
     {
         //
+        $planes = Plan::All();
+        dd($planes);
     }
 
     /**

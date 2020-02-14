@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEquipoSresTable extends Migration
+class CreateEquipoSreTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,22 +13,24 @@ class CreateEquipoSresTable extends Migration
      */
     public function up()
     {
-        Schema::create('equipo_sres', function (Blueprint $table) {
+        Schema::create('equipoSre', function (Blueprint $table) {
             $table->increments('id');
+            /**
+             * Codigo generado por una funcion... 10caracteres
+             */
+            $table->string('codigoEquipoSre')->unique();
             /**
              * Tipos: proveedor, beneficiario
              */
             $table->string('tipo');
-            $table->string('name_empresa');
-            $table->string('rif_dni');
+            $table->string('denominacion');
+            $table->string('rifDni');
             /**
              * Razon social: ingeniero, electricista, o si es una empresa seria limpiesa, reparacion etc.
              */
-            $table->string('razon_social');
-            /**
-             * Codigo generado por una funcion... 6caracteres
-             */
-            $table->string('codigo_equipo_sres')->unique();
+            $table->string('razonSocial');
+
+
 
             $table->timestamps();
         });
@@ -41,6 +43,6 @@ class CreateEquipoSresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('equipo_sres');
+        Schema::dropIfExists('equipoSre');
     }
 }

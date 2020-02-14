@@ -22,7 +22,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <form action="{{ route('user.create') }}" method="post">
+                                <form action="{{ route('register.create') }}" method="POST">
                                     @csrf
 
                                     <div class="form-group row justify-content-center">
@@ -71,7 +71,7 @@
                                                     {{-- <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Passwork') }}</label> --}}
 
                                                     <div class="col-md-10">
-                                                            <label for="password" >{{ __('Passwork') }}</label>
+                                                            <label for="password" >{{ __('password') }}</label>
                                                         <input id="password" type="text" class="input-register-style form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" required autocomplete="password" autofocus>
 
                                                         @error('password')

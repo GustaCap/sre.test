@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Reservacion;
+use App\Rol;
+use App\User;
 use Illuminate\Http\Request;
 
 class ReservacionController extends Controller
@@ -15,6 +17,17 @@ class ReservacionController extends Controller
     public function index()
     {
         //
+        // $reservaciones = Reservacion::All();
+        // $reservaciones = User::with('reservaciones')->get();
+        // $reservaciones->users;
+        // $user = User::first();
+        // $user->rol;
+        // dd($user);
+
+        $reservaciones = Reservacion::find(1);
+        dd($reservaciones->user);
+
+
     }
 
     /**

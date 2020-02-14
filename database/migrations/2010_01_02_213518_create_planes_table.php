@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVentaSresTable extends Migration
+class CreatePlanesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateVentaSresTable extends Migration
      */
     public function up()
     {
-        Schema::create('venta_sres', function (Blueprint $table) {
+        Schema::create('planes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('codigo');
+            /**Planes: 1. oro, 2. plata, 3. bronce */
+            $table->string('denominacion');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateVentaSresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('venta_sres');
+        Schema::dropIfExists('planes');
     }
 }
